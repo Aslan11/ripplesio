@@ -29,7 +29,6 @@ gulp.task('default', [
 	'appScripts', 
 	'styles',
 	'styles-mobile',
-	'styles-logo', 
 	'cssImages',
 	'html'
 ], function(){
@@ -40,21 +39,20 @@ gulp.task('default', [
 	});
 
 	// Sass Files
-	gulp.watch('development/styles/**/*', function(){
+	gulp.watch('development/assets/styles/**/*', function(){
 		gulp.run('styles');
 		gulp.run('styles-mobile');
-		gulp.run('styles-logo');
 	});
 	
 	// CSS Images
-	gulp.watch('development/styles/img/**/*', function(){
+	gulp.watch('development/assets/images/**/*', function(){
 		gulp.run('cssImages');
 	});
 
 	// HTML Files
 	gulp.watch([
 		'development/index.html', 
-		'development/views/*.html'
+		'development/assets/views/*.html'
 	], function() {
 		gulp.run('html');
 	});
@@ -114,25 +112,25 @@ gulp.task('appScripts', function() {
 ---------------------------------------------------------------------- */
 gulp.task('styles', function() {
 	// Process SASS
-	gulp.src('development/styles/main.scss')
+	gulp.src('development/assets/styles/style.scss')
 		.pipe(sass({
 			onError: function(e) {
 				return notify().write(e);
 			}
 		}))
 		.pipe(autoprefixer('last 2 versions', 'ie 9', 'safari 5.1', 'chrome 15', 'opera 11', 'firefox 7'))
-		.pipe(minifyCSS())
-		.pipe(gulp.dest('public/styles/'))
+		//.pipe(minifyCSS())
+		.pipe(gulp.dest('public/assets/styles/'))
 		.pipe(livereload({auto: true}));
 
 	// Process CSS images
-	gulp.src('development/styles/img/*').
-		pipe(gulp.dest('public/styles/img/'));
+	gulp.src('development/assets/images/*').
+		pipe(gulp.dest('public/assets/images/'));
 });
 
 gulp.task('styles-mobile', function() {
 	// Process SASS
-	gulp.src('development/styles/mobile.scss')
+	gulp.src('development/assets/styles/mobile.scss')
 		.pipe(sass({
 			onError: function(e) {
 				return notify().write(e);
@@ -140,37 +138,20 @@ gulp.task('styles-mobile', function() {
 		}))
 		.pipe(autoprefixer('last 2 versions', 'ie 9', 'safari 5.1', 'chrome 15', 'opera 11', 'firefox 7'))
 		// .pipe(minifyCSS())
-		.pipe(gulp.dest('public/styles/'))
+		.pipe(gulp.dest('public/assets/styles/'))
 		.pipe(livereload({auto: true}));
 
 });
-
-gulp.task('styles-logo', function() {
-	// Process SASS
-	gulp.src('development/styles/logo-animation.scss')
-		.pipe(sass({
-			onError: function(e) {
-				return notify().write(e);
-			}
-		}))
-		.pipe(autoprefixer('last 2 versions', 'ie 9', 'safari 5.1', 'chrome 15', 'opera 11', 'firefox 7'))
-		// .pipe(minifyCSS())
-		.pipe(gulp.dest('public/styles/'))
-		.pipe(livereload({auto: true}));
-
-});
-
 
 
 /*	Images
 ---------------------------------------------------------------------- */
 gulp.task('cssImages', function(){
-	gulp.src('development/styles/img/**/*')
-		.pipe(changed('public/styles/img'))
+	gulp.src('development/assets/images/**/*')
+		.pipe(changed('public/assets/images'))
 		.pipe(imagemin())
-		.pipe(gulp.dest('public/styles/img'));
+		.pipe(gulp.dest('public/assets/images'));
 });
-
 
 
 /*	HTML Tasks
@@ -183,25 +164,8 @@ gulp.task('html', function() {
 		.pipe(gulp.dest('public'));
 
 	// Angular Template Files
-	gulp.src('development/views/*.html')
+	gulp.src('development/assets/views/*.html')
 		.pipe(angularHTMLify())
 		// .pipe(minifyHTML())
-		.pipe(gulp.dest('public/views'));
+		.pipe(gulp.dest('public/assets/views'));
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

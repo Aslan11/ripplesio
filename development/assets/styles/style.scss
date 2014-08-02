@@ -1,13 +1,18 @@
+//Base
+@import 'base/normalize';
+@import 'base/base';
+@import 'base/typography';
 @import 'base/colors';
 @import 'base/icons';
-@import 'base/typography';
-@import 'base/base';
 
-@import 'interface/buttons';
-@import 'interface/animations';
-
+//Layout
 @import 'layout/header';
 @import 'layout/body';
 @import 'layout/footer';
 
+//Pages
 @import 'pages/home';
+
+//Interface Modules
+@import 'interface/buttons';
+@import 'interface/animations';

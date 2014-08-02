@@ -6,7 +6,5 @@ app.controller('mainController', function($scope, $rootScope, $location, $route,
 	$scope.$on('$routeChangeSuccess', function(){
 		$scope.currentView = $route.current.action;
 	});
-
-	//Menu Hover?
-	$scope.menuHover = false;
+	
 });

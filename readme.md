@@ -8,7 +8,6 @@ Company Website
 - MongoDB/ Mongoose (for later use)
 - AngularJS
 
-
 #### Local Requirements ####
 
 - Node/ NPM
