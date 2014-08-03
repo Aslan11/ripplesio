@@ -16,7 +16,7 @@
 	}
 
 	&.bg1{
-		background: url('http://107.170.210.89/background3.png');
+		background: url('../images/background2.png');
 		background-size: cover;
 	}
 
@@ -25,6 +25,7 @@
 	}
 
 	&.bg3{
-		background: #E5EEFF;
+		background: url('../images/bluesf.png');
+		background-size: cover;
 	}
 }

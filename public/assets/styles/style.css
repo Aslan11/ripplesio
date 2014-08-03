@@ -19,12 +19,13 @@
     display: block !important;
     opacity: 0; }
   .bg.bg1 {
-    background: url('http://107.170.210.89/background3.png');
+    background: url('../images/background2.png');
     background-size: cover; }
   .bg.bg2 {
     background: #ececec; }
   .bg.bg3 {
-    background: #E5EEFF; }
+    background: url('../images/bluesf.png');
+    background-size: cover; }
 
 body {
   font-family: 'Lato', 'helvetica neue', 'helvetica', sans-serif; }
@@ -123,6 +124,6 @@ nav {
   nav.work a {
     color: #f8803b; }
   nav.about .ripple {
-    background: #1e1e1e; }
+    background: #f8f8f8; }
   nav.about a {
-    color: #1e1e1e; }
+    color: #f8f8f8; }
