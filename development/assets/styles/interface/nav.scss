@@ -1,0 +1,126 @@
+nav{
+	width: 100%;
+	position: absolute;
+	z-index: 9999;
+	left: 0;
+	top: 0;
+	height: 60px;
+
+	ul{
+		float: right;
+		width: 500px;
+		height: 60px;
+		margin: 0;
+		list-style: none;
+
+		li{
+			display: inline-block;
+			float: right;
+			margin-left: 40px;
+			margin-top: 18px;
+			&:first-of-type{
+				margin-right: 40px;
+			}
+
+			&:last-of-type{
+				margin-left: 0;
+			}
+
+			a{
+				transition: opacity .2s, color .4s;
+			}
+		}
+	}
+
+	.logo{
+		width: 60px;
+		height: 60px;
+		position: absolute;
+
+		.ripple{
+			border-radius: 36%;
+			transform: rotate(45deg);
+			position: absolute;
+			opacity: 0.3;
+			margin: auto;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+
+
+			&:nth-of-type(1){
+				width: 10px;
+				height: 10px;
+			}
+			&:nth-of-type(2){
+				width: 20px;
+				height: 20px;
+			}
+			&:nth-of-type(3){
+				width: 30px;
+				height: 30px;
+			}
+			&:nth-of-type(4){
+				width: 40px;
+				height: 40px;
+			}
+		}
+	}
+
+	.brand{
+		font-size: 24px;
+		font-weight: 400px;
+		font-family: "Montserrat";
+		width: 170px;
+		height: 60px;
+		margin: 0;
+		padding: 0;
+		display: block;
+		float: left;
+
+		h3{
+			position: absolute;
+			left: 60px;
+			top: 12px;
+			margin: 0;
+		}
+	}
+
+	a{
+		transition: opacity .2s;
+		&:hover{
+			opacity: 0.3;
+		}
+	}
+
+	&.home{
+		.ripple{
+			background: white;
+		}
+
+		a{
+			color: white;
+		}
+	}
+
+	&.work{
+		.ripple{
+			background: #f8803b;
+		}
+
+		a{
+			color: #f8803b;
+		}
+	}
+
+	&.about{
+		.ripple{
+			background: #1e1e1e;
+		}
+
+		a{
+			color: #1e1e1e;
+		}
+	}
+}

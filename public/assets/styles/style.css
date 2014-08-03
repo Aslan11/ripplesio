@@ -1,0 +1,128 @@
+.bg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+  z-index: -1; }
+  .bg.ng-hide {
+    display: block !important;
+    opacity: 0; }
+  .bg.bg1 {
+    background: url('http://107.170.210.89/background3.png');
+    background-size: cover; }
+  .bg.bg2 {
+    background: #ececec; }
+  .bg.bg3 {
+    background: #E5EEFF; }
+
+body {
+  font-family: 'Lato', 'helvetica neue', 'helvetica', sans-serif; }
+
+a {
+  text-decoration: none; }
+
+figure {
+  margin: 0; }
+
+nav {
+  width: 100%;
+  position: absolute;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  height: 60px; }
+  nav ul {
+    float: right;
+    width: 500px;
+    height: 60px;
+    margin: 0;
+    list-style: none; }
+    nav ul li {
+      display: inline-block;
+      float: right;
+      margin-left: 40px;
+      margin-top: 18px; }
+      nav ul li:first-of-type {
+        margin-right: 40px; }
+      nav ul li:last-of-type {
+        margin-left: 0; }
+      nav ul li a {
+        -webkit-transition: opacity 0.2s, color 0.4s;
+        -moz-transition: opacity 0.2s, color 0.4s;
+        -o-transition: opacity 0.2s, color 0.4s;
+        transition: opacity 0.2s, color 0.4s; }
+  nav .logo {
+    width: 60px;
+    height: 60px;
+    position: absolute; }
+    nav .logo .ripple {
+      border-radius: 36%;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      position: absolute;
+      opacity: 0.3;
+      margin: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0; }
+      nav .logo .ripple:nth-of-type(1) {
+        width: 10px;
+        height: 10px; }
+      nav .logo .ripple:nth-of-type(2) {
+        width: 20px;
+        height: 20px; }
+      nav .logo .ripple:nth-of-type(3) {
+        width: 30px;
+        height: 30px; }
+      nav .logo .ripple:nth-of-type(4) {
+        width: 40px;
+        height: 40px; }
+  nav .brand {
+    font-size: 24px;
+    font-weight: 400px;
+    font-family: "Montserrat";
+    width: 170px;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    display: block;
+    float: left; }
+    nav .brand h3 {
+      position: absolute;
+      left: 60px;
+      top: 12px;
+      margin: 0; }
+  nav a {
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    transition: opacity 0.2s; }
+    nav a:hover {
+      opacity: 0.3; }
+  nav.home .ripple {
+    background: white; }
+  nav.home a {
+    color: white; }
+  nav.work .ripple {
+    background: #f8803b; }
+  nav.work a {
+    color: #f8803b; }
+  nav.about .ripple {
+    background: #1e1e1e; }
+  nav.about a {
+    color: #1e1e1e; }

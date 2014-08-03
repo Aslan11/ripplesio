@@ -7,6 +7,21 @@ app.config(function($httpProvider, $routeProvider, $locationProvider){
 		when('/', {
 			action: 'home'
 		}).
+		when('/about', {
+			action: 'about'
+		}).
+		when('/work', {
+			action: 'work'
+		}).
+		when('/services', {
+			action: 'services'
+		}).
+		when('/news', {
+			action: 'news'
+		}).
+		when('/contact', {
+			action: 'contact'
+		}).
 		
 		otherwise({ redirectTo: '/' });
 

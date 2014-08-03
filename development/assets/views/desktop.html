@@ -1,3 +1,26 @@
-<link rel="stylesheet" href="/styles/main.css">
+<link rel="stylesheet" href="/assets/styles/style.css">
 <!-- Main Navigation -->
-<h1>Hello World</h1>
+<nav ng-class="currentView">
+	<a class="brand" href="/">
+		<figure class="logo">
+			<div class="ripple"></div>
+			<div class="ripple"></div>
+			<div class="ripple"></div>
+			<div class="ripple"></div>
+		</figure>
+		<h3>Ripples</h3>	
+	</a>
+	<ul>
+		<li><a href="/work">WORK</a></li>
+		<li><a href="/about">ABOUT</a></li>
+		<li><a href="/services">SERVICES</a></li>
+		<li><a href="/blog">BLOG</a></li>
+		<li><a href="/contact">CONTACT</a></li>
+	</ul>
+</nav>
+<figure class="bg1 bg" ng-hide="currentView != 'home'"></figure>
+<figure class="bg2 bg" ng-hide="currentView != 'work'"></figure>
+<figure class="bg3 bg" ng-hide="currentView != 'about'"></figure>
+<figure class="bg4 bg" ng-hide="currentView != 'services'"></figure>
+<figure class="bg5 bg" ng-hide="currentView != 'blog'"></figure>
+<figure class="bg6 bg" ng-hide="currentView != 'contact'"></figure>
