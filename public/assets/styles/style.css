@@ -39,7 +39,7 @@ html, body {
   -moz-transition: opacity 0.4s;
   -o-transition: opacity 0.4s;
   transition: opacity 0.4s;
-  z-index: 1;
+  z-index: -1;
   background: #f8f8f8; }
   .bg.ng-hide {
     display: block !important;
@@ -74,23 +74,43 @@ figure {
   min-height: 420px;
   margin-top: 3em; }
 
-.about-section .deck .card .c-head img {
-  box-shadow: 0 0 0 2px #90B4E4; }
-.about-section .deck .card .c-head h1, .about-section .deck .card .c-head h2, .about-section .deck .card .c-head h3, .about-section .deck .card .c-head h4 {
-  color: #90B4E4; }
-.about-section .deck .card .c-foot ul li a {
-  color: #90B4E4; }
+.about-section .deck .card {
+  opacity: 1;
+  -webkit-animation: pop 1s ease;
+  -moz-animation: pop 1s ease;
+  animation: pop 1s ease; }
+  .about-section .deck .card:nth-child(1) {
+    -webkit-animation: pop 1s ease 0s;
+    -moz-animation: pop 1s ease 0s;
+    animation: pop 1s ease 0s; }
+  .about-section .deck .card:nth-child(2) {
+    -webkit-animation: pop 1s ease 0.15s;
+    -moz-animation: pop 1s ease 0.15s;
+    animation: pop 1s ease 0.15s; }
+  .about-section .deck .card:nth-child(3) {
+    -webkit-animation: pop 1s ease 0.3s;
+    -moz-animation: pop 1s ease 0.3s;
+    animation: pop 1s ease 0.3s; }
+  .about-section .deck .card .c-head img {
+    box-shadow: 0 0 0 2px #90B4E4; }
+  .about-section .deck .card .c-head h1, .about-section .deck .card .c-head h2, .about-section .deck .card .c-head h3, .about-section .deck .card .c-head h4 {
+    color: #90B4E4; }
+  .about-section .deck .card .c-foot ul li a {
+    color: #90B4E4; }
 .about-section .deck.c-full {
   margin-top: 1em;
-  float: left; }
+  float: le; }
 
 nav {
-  width: 100%;
+  width: 90%;
   position: absolute;
   z-index: 9999;
   left: 0;
   top: 0;
-  height: 60px; }
+  height: 60px;
+  right: 0;
+  margin: auto;
+  padding: 1em 0; }
   nav ul {
     float: right;
     width: 500px;
@@ -164,7 +184,7 @@ nav {
     nav .brand h3 {
       position: absolute;
       left: 60px;
-      top: 6px;
+      top: 23px;
       margin: 0;
       font-weight: 100;
       -webkit-transition: color;
@@ -203,15 +223,65 @@ nav {
   nav.contact a {
     color: #f83b55; }
 
+@-webkit-keyframes pop {
+  0% {
+    opacity: 0; }
+
+  66% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    opacity: 0; }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; } }
+
+@-moz-keyframes pop {
+  0% {
+    opacity: 0; }
+
+  66% {
+    -moz-transform: scale(1.3);
+    transform: scale(1.3);
+    opacity: 0; }
+
+  100% {
+    -moz-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; } }
+
+@keyframes pop {
+  0% {
+    opacity: 0; }
+
+  66% {
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    transform: scale(1.3);
+    opacity: 0; }
+
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; } }
+
 .deck {
   max-width: 90%;
-  margin: 4em auto; }
+  margin: 5em auto; }
   .deck .card {
     border-radius: 2px;
     overflow: hidden;
     box-shadow: 0 0 0 1px #E2E0DF;
     background: white;
     padding: 1em;
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+    transition: all 0.1s ease;
     min-width: 240px; }
     .deck .card .c-head {
       width: -webkit-calc(100% + 2.05em);
@@ -293,6 +363,13 @@ nav {
         width: 33%; }
         .deck .card .c-foot ul li a {
           color: #F87B27; }
+    .deck .card:hover {
+      box-shadow: 0 1em 1em rgba(0, 0, 0, 0.1);
+      -webkit-transform: scale(1.01);
+      -moz-transform: scale(1.01);
+      -ms-transform: scale(1.01);
+      -o-transform: scale(1.01);
+      transform: scale(1.01); }
 
 @media screen and (max-width: 320px) {
   .deck .card {

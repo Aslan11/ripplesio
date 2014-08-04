@@ -2,9 +2,10 @@
 .deck{
 
   max-width:90%;
-  margin: 4em auto;
+  margin: 5em auto;
 
   .card{
+
 
     $head-height:  120px;
 
@@ -16,6 +17,8 @@
     background: rgba(white, 1);
 
     padding: 1em;
+
+    transition: all .1s ease;
 
 
     .c-head{
@@ -149,7 +152,14 @@
         }
       }
     }
+
+ &:hover{
+      box-shadow: 0 1em 1em rgba(black, .1);
+      transform: scale(1.01) ;
+    }
   }
+
+
 
 }
 
