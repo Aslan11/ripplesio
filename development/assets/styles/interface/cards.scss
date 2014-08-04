@@ -1,0 +1,164 @@
+
+.deck{
+
+  max-width:90%;
+  margin: 1em auto;
+
+  .card{
+
+    $head-height:  120px;
+
+    // Basic design
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px #E2E0DF;
+
+    background: rgba(white, 1);
+
+    padding: 1em;
+
+
+    .c-head{
+      width: calc(100% + 2.05em);
+      min-height: $head-height;
+      margin-top: -2.2em;
+      margin-left: -1em;
+
+      text-align: center;
+
+      color: #F87B27;
+      font-weight: 500;
+
+      line-height: 3;
+
+
+      h4{
+        color: #CDBEB5;
+        font-weight: 300;
+        line-height: 0;
+      }
+
+
+
+
+      img{
+        box-shadow: 0 0 0 2px #F87B27;
+        display: block;
+        width: 120px;
+        margin: 3em auto;
+        border-radius: 100%;
+      }
+
+       // Types
+       &.red{
+         background: url(http://i.imgur.com/NH1nLsV.png);
+       }
+       &.c-head-blue{
+         background: #65CBAE;
+         color: #fff;
+         h4{
+           color: #fff
+         }
+       }
+      &.c-head-grey{
+        background: #8B999D
+      }
+      &.c-head-orange{
+        background: #FA802F;
+      }
+       &.green{
+         background: url(http://i.imgur.com/hCrSRTN.png);
+      }
+
+
+      .head-control{
+        position: absolute;
+        ul{
+          list-style: none;
+          margin: -1em -1em;
+
+          li{
+            float: left;
+            margin: 0 1em;
+          }
+        }
+      }
+    }
+
+
+    .c-content{
+      margin-top: 1em;
+      padding: 1em 0;
+      font-weight: 300;
+
+      h1,h2,h3,h4{
+        text-align: center;
+      }
+
+      p{
+        color: #CDBEB5;
+        text-align: center;
+      }
+    }
+
+    // sizes
+
+    min-width: 240px;
+    &.c-full{
+      width: 100%;
+      margin: 1em auto;
+    }
+
+
+    &.c-double{
+      width: 48%;
+      margin-top: 1em;
+      margin-left: 4%;
+      float: left;
+      &:nth-child(1){
+        margin-left: 0%;
+      }
+    }
+
+    &.c-tier  {
+      width: 31%;
+      margin-top: 1em;
+      margin-left: 3.5%;
+      float: left;
+
+      &:first-child{
+        margin-left: 0;
+      }
+    }
+
+    .c-foot{
+      ul{
+        list-style: none;
+        width: 80%;
+        padding: 2em 0;
+        margin: auto;
+        li{
+          float: left;
+          display: block;
+          text-align: center;
+          width: 33%;
+
+          a{
+            color: #F87B27;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+@media screen and (max-width: 320px){
+  .deck{
+    .card{
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
