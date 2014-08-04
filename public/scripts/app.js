@@ -13,8 +13,8 @@ app.config(function($httpProvider, $routeProvider, $locationProvider){
 		when('/work', {
 			action: 'work'
 		}).
-		when('/services', {
-			action: 'services'
+		when('/store', {
+			action: 'store'
 		}).
 		when('/news', {
 			action: 'news'

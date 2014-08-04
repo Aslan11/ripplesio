@@ -30,6 +30,7 @@ gulp.task('default', [
 	'styles',
 	'styles-mobile',
 	'cssImages',
+	'cssFonts',
 	'html'
 ], function(){
 	
@@ -47,6 +48,11 @@ gulp.task('default', [
 	// CSS Images
 	gulp.watch('development/assets/images/**/*', function(){
 		gulp.run('cssImages');
+	});
+
+	//CSS Fonts
+	gulp.watch('development/assets/fonts/**/*', function(){
+		gulp.run('cssFonts');
 	});
 
 	// HTML Files
@@ -151,6 +157,14 @@ gulp.task('cssImages', function(){
 		.pipe(changed('public/assets/images'))
 		.pipe(imagemin())
 		.pipe(gulp.dest('public/assets/images'));
+});
+
+/*	Fonts
+---------------------------------------------------------------------- */
+gulp.task('cssFonts', function(){
+	gulp.src('development/assets/fonts/**/*')
+		.pipe(changed('public/assets/fonts'))
+		.pipe(gulp.dest('public/assets/fonts'));
 });
 
 

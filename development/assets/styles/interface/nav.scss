@@ -17,17 +17,13 @@ nav{
 			display: inline-block;
 			float: right;
 			margin-left: 40px;
-			margin-top: 18px;
+			margin-top: 20px;
 			&:first-of-type{
 				margin-right: 40px;
 			}
 
 			&:last-of-type{
 				margin-left: 0;
-			}
-
-			a{
-				transition: opacity .2s, color .4s;
 			}
 		}
 	}
@@ -47,31 +43,34 @@ nav{
 			right: 0;
 			bottom: 0;
 			left: 0;
+			transition: background .2s;
 
 
 			&:nth-of-type(1){
-				width: 10px;
-				height: 10px;
+				width: 8px;
+				height: 8px;
 			}
 			&:nth-of-type(2){
-				width: 20px;
-				height: 20px;
+				width: 16px;
+				height: 16px;
+				transition: background .2s .1s;
 			}
 			&:nth-of-type(3){
-				width: 30px;
-				height: 30px;
+				width: 24px;
+				height: 24px;
+				transition: background .2s .2s;
 			}
 			&:nth-of-type(4){
-				width: 40px;
-				height: 40px;
+				width: 32px;
+				height: 32px;
+				transition: background .2s .3s;
 			}
 		}
 	}
 
 	.brand{
 		font-size: 24px;
-		font-weight: 400px;
-		font-family: "Montserrat";
+		font-family: "gyre";
 		width: 170px;
 		height: 60px;
 		margin: 0;
@@ -82,13 +81,15 @@ nav{
 		h3{
 			position: absolute;
 			left: 60px;
-			top: 12px;
+			top: 6px;
 			margin: 0;
+			font-weight: 100;
+			transition: color
 		}
 	}
 
 	a{
-		transition: opacity .2s;
+		transition: opacity .2s, color .4s;
 		&:hover{
 			opacity: 0.3;
 		}
@@ -106,21 +107,41 @@ nav{
 
 	&.work{
 		.ripple{
-			background: #f8803b;
+			background: #FF7806;
 		}
 
 		a{
-			color: #f8803b;
+			color: #FF7806;
 		}
 	}
 
 	&.about{
 		.ripple{
-			background: #f8f8f8;
+			background: #89999D;
 		}
 
 		a{
-			color: #f8f8f8;
+			color: #89999D;
+		}
+	}
+
+	&.store{
+		.ripple{
+			background: #45D1B0;
+		}
+
+		a{
+			color: #45D1B0;
+		}
+	}
+
+	&.contact{
+		.ripple{
+			background: #930000;
+		}
+
+		a{
+			color: #930000;
 		}
 	}
 }
