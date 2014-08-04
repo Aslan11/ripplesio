@@ -117,11 +117,11 @@ nav{
 
 	&.about{
 		.ripple{
-			background: #89999D;
+			background: #719fdd;
 		}
 
 		a{
-			color: #89999D;
+			color: #719fdd;
 		}
 	}
 
@@ -135,13 +135,23 @@ nav{
 		}
 	}
 
-	&.contact{
+	&.blog{
 		.ripple{
-			background: #930000;
+			background: #45D1B0;
 		}
 
 		a{
-			color: #930000;
+			color: #45D1B0;
+		}
+	}
+
+	&.contact{
+		.ripple{
+			background: #f83b55;
+		}
+
+		a{
+			color: #f83b55;
 		}
 	}
 }

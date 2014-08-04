@@ -2,7 +2,8 @@ html, body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  margin: 0; }
+  margin: 0;
+  background: #f8f8f8; }
 
 .view {
   width: 100%;
@@ -32,7 +33,7 @@ html, body {
   -moz-transition: opacity 0.4s;
   -o-transition: opacity 0.4s;
   transition: opacity 0.4s;
-  z-index: -1;
+  z-index: 1;
   background: #f8f8f8; }
   .bg.ng-hide {
     display: block !important;
@@ -190,14 +191,18 @@ nav {
   nav.work a {
     color: #FF7806; }
   nav.about .ripple {
-    background: #89999D; }
+    background: #719fdd; }
   nav.about a {
-    color: #89999D; }
+    color: #719fdd; }
   nav.store .ripple {
     background: #FF7806; }
   nav.store a {
     color: #FF7806; }
+  nav.blog .ripple {
+    background: #45D1B0; }
+  nav.blog a {
+    color: #45D1B0; }
   nav.contact .ripple {
-    background: #930000; }
+    background: #f83b55; }
   nav.contact a {
-    color: #930000; }
+    color: #f83b55; }
