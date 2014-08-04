@@ -10,14 +10,11 @@ app.config(function($httpProvider, $routeProvider, $locationProvider){
 		when('/about', {
 			action: 'about'
 		}).
-		when('/work', {
-			action: 'work'
-		}).
 		when('/store', {
 			action: 'store'
 		}).
-		when('/news', {
-			action: 'news'
+		when('/blog', {
+			action: 'blog'
 		}).
 		when('/contact', {
 			action: 'contact'

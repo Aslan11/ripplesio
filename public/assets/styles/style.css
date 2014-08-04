@@ -33,7 +33,7 @@ html, body {
   -o-transition: opacity 0.4s;
   transition: opacity 0.4s;
   z-index: -1;
-  background: white; }
+  background: #f8f8f8; }
   .bg.ng-hide {
     display: block !important;
     opacity: 0; }
@@ -194,9 +194,9 @@ nav {
   nav.about a {
     color: #89999D; }
   nav.store .ripple {
-    background: #45D1B0; }
+    background: #FF7806; }
   nav.store a {
-    color: #45D1B0; }
+    color: #FF7806; }
   nav.contact .ripple {
     background: #930000; }
   nav.contact a {
