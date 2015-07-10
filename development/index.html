@@ -21,11 +21,10 @@ Kevin Paul Martin
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
 	<title>Ripples</title>
 	<link rel="icon" type="image/png" href="assets/images/favicon.ico">
-	<link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Montserrat:400,700" rel="stylesheet" type="text/css">
 </head>
 <body resize>
-	<ng-include src="'/assets/views/mobile.html'" ng-show="browserType == 'mobile'"></ng-include>
-	<ng-include src="'/assets/views/desktop.html'" ng-show="browserType == 'desktop'" ng-controller="mainController"></ng-include>
+	<div class="view" ng-include="'/assets/views/mobile.html'" ng-show="browserType == 'mobile'"></div>
+	<div class="view" ng-include="'/assets/views/desktop.html'" ng-show="browserType == 'desktop'" ng-controller="mainController"></div>
 	<!-- Scripts -->
 	<script src="/scripts/vendor.js"></script>
 	<script src="/scripts/app.js"></script>

@@ -1,3 +1,31 @@
+*{
+	box-sizing: border-box;
+	font-smooting: antialiased;
+}
+html, body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	margin: 0;
+	background: #f8f8f8;
+}
+
+.view{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.cf {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 .bg{
 	width: 100%;
 	height: 100%;
@@ -9,22 +37,15 @@
 	transform: translate3d(0,0,0);
 	transition: opacity .4s;
 	z-index: -1;
-	
+	background: #f8f8f8;
+
 	&.ng-hide{
 		display: block !important;
 		opacity: 0;
 	}
 
 	&.bg1{
-		background: url('http://107.170.210.89/background3.png');
+		background: url('../images/background2.png');
 		background-size: cover;
-	}
-
-	&.bg2{
-		background: #ececec;
-	}
-
-	&.bg3{
-		background: #E5EEFF;
 	}
 }

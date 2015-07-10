@@ -1,5 +1,15 @@
+@font-face {
+    font-family: 'gyre';
+    src: url('../fonts/texgyreadventor-regular.otf');
+}
+
+@font-face {
+    font-family: 'proxima-nova';
+    src: url('../fonts/proximanovaregular.ttf');
+}
+
 body{
-	font-family: 'Lato', 'helvetica neue', 'helvetica', sans-serif;
+	font-family: 'proxima-nova', 'helvetica neue', 'helvetica', sans-serif;
 }
 
 a{
